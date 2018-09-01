@@ -1,0 +1,20 @@
+button {
+    font-size: 2em;
+    width: 80px;
+    height: 80px;
+}
+
+button.white {
+    color: whitesmoke;
+    text-decoration: black;
+    text-decoration-line: underline;
+}
+
+button.black {
+    color: black;
+}
+
+.row:nth-child(even) button:nth-child(2n+1),
+.row:nth-child(odd) button:nth-child(2n) {
+  background: forestgreen;
+}
