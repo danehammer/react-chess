@@ -1,6 +1,24 @@
 .algebra {
-  width: 80px;
+  width: 20px;
   display: inline-block;
   text-align: center;
-  height: 1em;
+  font-size: 2em;
+}
+
+.algebra.left {
+  margin-right: 10px;
+}
+
+.algebra.right {
+  margin-left: 10px;
+}
+
+.top .algebra {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.bottom .algebra {
+  width: 80px;
+  margin-top: 10px;
 }

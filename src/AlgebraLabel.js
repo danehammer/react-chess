@@ -4,8 +4,9 @@ import './AlgebraLabel.css';
 class AlgebraLabel extends Component {
 
   render() {
+    const className = `algebra ${this.props.pos}`
     return (
-      <label className='algebra'>{this.props.value}</label>
+      <label className={className}>{this.props.value}</label>
     );
   }
 }

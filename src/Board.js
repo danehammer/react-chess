@@ -64,7 +64,7 @@ class Board extends Component {
 
     ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'].forEach((i) => {
       const squares = [];
-      squares.push(<AlgebraLabel key={i + 0} value={i} />);
+      squares.push(<AlgebraLabel key={i + 0} value={i} pos='left' />);
       const rowPieces = pieces.get(i);
       // Going left to right, top to bottom means we start at A8
       for (let j = 8; j >= 1; j--) {
@@ -80,7 +80,7 @@ class Board extends Component {
           squares.push(<Square key={i + j} />);
         }
       }
-      squares.push(<AlgebraLabel key={i + 9} value={i} />);
+      squares.push(<AlgebraLabel key={i + 9} value={i} pos='right' />);
       rows.push(<div className='row' key={'row' + i}>{squares}</div>);
     });
 
@@ -88,7 +88,7 @@ class Board extends Component {
     for (let i = 8; i >= 1; i--) {
       bottomAlgebraRow.push(<AlgebraLabel key={'0' + i} value={i} />);
     }
-    rows.push(<div className='row' key='0row'>{bottomAlgebraRow}</div>);
+    rows.push(<div className='row bottom' key='0row'>{bottomAlgebraRow}</div>);
 
     return (
       <div className='board'>

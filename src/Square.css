@@ -1,20 +1,61 @@
-button {
+.square {
     font-size: 2em;
     width: 80px;
     height: 80px;
+    display: inline-block;
+    overflow: hidden;
 }
 
-button.white {
-    color: whitesmoke;
-    text-decoration: black;
-    text-decoration-line: underline;
-}
-
-button.black {
-    color: black;
-}
-
-.row:nth-child(even) button:nth-child(2n+1),
-.row:nth-child(odd) button:nth-child(2n) {
+.row:nth-child(even) .square:nth-child(2n+1),
+.row:nth-child(odd) .square:nth-child(2n) {
   background: forestgreen;
+}
+
+img.piece {
+  width: 480px;
+  height: 160px;
+}
+
+img.piece.white.queen {
+  margin: 0 0 0 -80px;
+}
+
+img.piece.white.bishop {
+  margin: 0 0 0 -160px;
+}
+
+img.piece.white.knight {
+  margin: 0 0 0 -240px;
+}
+
+img.piece.white.rook {
+  margin: 0 0 0 -320px;
+}
+
+img.piece.white.pawn {
+  margin: 0 0 0 -400px;
+}
+
+img.piece.black.king {
+  margin: -80px 0 0 0;
+}
+
+img.piece.black.queen {
+  margin: -80px 0 0 -80px;
+}
+
+img.piece.black.bishop {
+  margin: -80px 0 0 -160px;
+}
+
+img.piece.black.knight {
+  margin: -80px 0 0 -240px;
+}
+
+img.piece.black.rook {
+  margin: -80px 0 0 -320px;
+}
+
+img.piece.black.pawn {
+  margin: -80px 0 0 -400px;
 }
