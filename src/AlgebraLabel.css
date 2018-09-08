@@ -1,4 +1,6 @@
 .algebra {
   width: 80px;
-  height: 80px;
+  display: inline-block;
+  text-align: center;
+  height: 1em;
 }

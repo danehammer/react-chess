@@ -5,7 +5,7 @@ class AlgebraLabel extends Component {
 
   render() {
     return (
-      <span className='algebra'>{this.props.value}</span>
+      <label className='algebra'>{this.props.value}</label>
     );
   }
 }

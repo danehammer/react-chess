@@ -60,7 +60,7 @@ class Board extends Component {
     for (let i = 8; i >= 1; i--) {
       topAlgebraRow.push(<AlgebraLabel key={'9' + i} value={i} />);
     }
-    rows.push(<div className='row' key='9row'>{topAlgebraRow}</div>);
+    rows.push(<div className='row top' key='9row'>{topAlgebraRow}</div>);
 
     ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'].forEach((i) => {
       const squares = [];
