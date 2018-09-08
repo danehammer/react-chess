@@ -70,7 +70,6 @@ class Board extends Component {
       for (let j = 8; j >= 1; j--) {
         let piece;
         if (rowPieces) {
-          console.log(rowPieces);
           // offset into state
           piece = rowPieces[j - 1];
         }

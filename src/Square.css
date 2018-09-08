@@ -11,6 +11,22 @@
   background: forestgreen;
 }
 
+.row:nth-child(2) .square {
+  border-top: 1px black solid;
+}
+
+.row:nth-child(9) .square {
+  border-bottom: 1px black solid;
+}
+
+.square:nth-child(2) {
+  border-left: 1px black solid;
+}
+
+.square:nth-child(9) {
+  border-right: 1px black solid;
+}
+
 img.piece {
   width: 480px;
   height: 160px;
