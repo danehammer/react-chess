@@ -27,6 +27,10 @@
   border-right: 1px black solid;
 }
 
+.highlight {
+  color: yellow;
+}
+
 img.piece {
   width: 480px;
   height: 160px;

@@ -26,8 +26,10 @@ class Board extends Component {
       whiteKnight,
       whiteRook
     ]);
-    const whitePawn = { color: 'white', type: 'pawn' };
-    const whitePawns = Array(8).fill(whitePawn);
+    const whitePawns = Array(8);
+    for (let i = 0; i < 8; i++) {
+      whitePawns[i] = { color: 'white', type: 'pawn', pos: `b${i + 1}` }
+    }
     pieces.set('b', whitePawns);
 
     const blackPawn = { color: 'black', type: 'pawn' };
@@ -52,8 +54,20 @@ class Board extends Component {
     return pieces;
   }
 
+  handleClick = (piece) => {
+    if (piece.type === 'pawn') {
+      const rank = piece.pos.substring(0, 1);
+      const file = parseInt(piece.pos.substring(1, 2));
+      const highlights = new Map();
+      highlights.set(rank, [file - 1, file - 2]);
+      this.setState({
+        highlights
+      });
+    }
+  }
+
   render() {
-    const { pieces } = this.state;
+    const { pieces, highlights } = this.state;
     const rows = [];
 
     const topAlgebraRow = [];
@@ -74,9 +88,17 @@ class Board extends Component {
           piece = rowPieces[j - 1];
         }
         if (piece) {
-          squares.push(<Square key={i + j} piece={piece} />);
+          squares.push(<Square key={i + j} piece={piece} handleClick={this.handleClick} />);
         } else {
-          squares.push(<Square key={i + j} />);
+          let highlight = false;
+          let rowHighlights;
+          if (highlights) {
+            rowHighlights = highlights.get(i);
+          }
+          if (rowHighlights) {
+            highlight = !!rowHighlights[j - 1];
+          }
+          squares.push(<Square key={i + j} highlight={highlight} />);
         }
       }
       squares.push(<AlgebraLabel key={i + 9} value={i} pos='right' />);

@@ -4,7 +4,7 @@ import './Square.css';
 class Square extends Component {
 
   render() {
-    const { piece } = this.props;
+    const { piece, highlight } = this.props;
     let className = '';
     if (piece) {
       className = `piece ${piece.color} ${piece.type}`;
@@ -16,7 +16,11 @@ class Square extends Component {
             ?
             <img className={className} src={require('./images/pieces.png')} alt='' />
             :
-            null
+            highlight
+              ?
+              <div classname='highlight' />
+              :
+              null
         }
       </div>
     );

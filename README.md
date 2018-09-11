@@ -3,7 +3,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-## Table of Contents
+# Work Dane Actually Created
+
+* Need to fix that I got my Chess Algebra all switched, ranks and files are reversed
+* Want to get where you click a pawn, you see the two spaces in front of it highlighted
+
+To redeploy, run `npm run deploy` which will push to the `gh-pages` branch of the repo, and
+end up at https://danehammer.rocks/react-chess
+
+## Table of Contents from create-react-app
 
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
