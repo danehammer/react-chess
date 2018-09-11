@@ -2,7 +2,7 @@
   "name": "react-chess",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://danehammer.github.io/chess",
+  "homepage": "https://danehammer.rocks/react-chess",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "react": "^16.4.2",
